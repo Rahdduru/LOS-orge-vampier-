@@ -1,2 +1,2 @@
 # LOS-orge-vampier-
-LORD OF SQL INJECTION 풀이 orge~vampire
+LORD OF SQL INJECTION 풀이

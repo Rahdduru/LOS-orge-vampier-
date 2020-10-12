@@ -37,3 +37,5 @@ pw=7b751aec
  id=Admin
  
  ### #Vampire#
+
+ if($result['id'] == 'admin') solve("vampire"); troll과 문제를 푸는 조건이 동일하다.<br>

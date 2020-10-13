@@ -26,8 +26,8 @@ pw=7b751aec
  admin을 필터링 해버린다.<br><br>
  
  이 문제의 경우 php의 함수를 조금 알아야한다.<br>
- php의 ereg함수를 이용해서 필터링을 하고 있다.<br>
- ereg함수는 대소문자를 구분하는 반면,<br>
+ php의 preg_match함수를 이용해서 필터링을 하고 있다.<br>
+ preg_match함수는 대소문자를 구분하는 반면,<br>
  database는 table의 이름과 atrribute 이름에서만 대소문자 구분을 한다.<br>
  즉, database의 table 안에 있는 정보를 검색할 때 대소문자를 구분하지 않는다.<br>
  이를 이용해 이번 문제를 풀어준다.<br><br>
@@ -37,5 +37,10 @@ pw=7b751aec
  id=Admin
  
  ### #Vampire#
-
+ 
  if($result['id'] == 'admin') solve("vampire"); troll과 문제를 푸는 조건이 동일하다.<br>
+ 다만,   $_GET[id] = str_replace("admin","",$_GET[id]); 이 문장을 보면 admin을 띄어쓰기가 아닌 공백으로 바꾼다.<br>
+이는 쉽게 해결할 수 있는데, admin사이에 admin을 한번 더 넣어주면 쉽게 해결 가능하다.<br>
+admin사이에 들어있는 admin이 공백이 되면서 끊어진 admin이 연결되어 단어가 완성된다.<br><br>
+
+id=adadminmin
